@@ -1,0 +1,35 @@
+//Array of pointers to structures
+//Book search
+#include<stdio.h>
+struct book
+{
+    int id;
+    char title[20];
+    char author[20];
+};
+int main()
+{
+    struct book b1={101,"c-intro","Ritchie.D"};
+    struct book b2={102,"story","AAA"};
+    struct book b3={103,"tab","XXX"};
+    //array of ptr to structures
+    struct book *books[3]={&b1,&b2,&b3};
+    int searchid,i,found=0;
+    printf("enter book id to search\n");
+    scanf("%d",&searchid);
+    for(i=0;i<3;i++)
+    {
+        if(books[i]->id==searchid)
+        {
+            found=1;
+            printf("book found\n");
+            printf("id=%d\n",books[i]->id);
+            printf("title=%s\n",books[i]->title);
+            printf("title=%s\n",books[i]->author);
+            break;
+        }
+    }
+    if(!found)
+    printf("not found");
+    return 0;
+}

@@ -1,0 +1,10 @@
+//program to count no of elements in array
+#include<stdio.h>
+int main()
+{
+    int arr[]={10,20,30,40,50,60,70};
+    int count;
+    count=sizeof (arr)/sizeof(arr[0]);
+    printf("number of elements in the array=%d",count);
+    return 0;
+}
