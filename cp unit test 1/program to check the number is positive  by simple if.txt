@@ -1,0 +1,13 @@
+//program to check the number is positive by simple if
+#include<stdio.h>
+int main()
+{
+    int x;
+    printf("enter the number\n");
+    scanf("%d",&x);
+    if(x>0)
+    {
+        printf("%d is positive");
+    }
+    return 0;
+}
